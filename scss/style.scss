@@ -174,7 +174,36 @@ header{
 }
 
 .jobs{
+    margin-top: 50px;
+
     h2{
+        margin-bottom: 20px;
+        font-family: 'Lora', serif;
+        font-size: 50px;
+        color: #ec6834;
+        text-align: center;
+        letter-spacing: 3px;
+    }
+
+    &-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 50px;
+
+        &__foto{
+            width: 15%;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.service{
+    h2{
+        margin-bottom: 20px;
         font-family: 'Lora', serif;
         font-size: 50px;
         color: #ec6834;
