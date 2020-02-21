@@ -6,21 +6,72 @@
     <title>Beauty bar</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Наши акции</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-block">
+                    <p class="modal-body-block__title">Маникюр + педикюр</p>
+                    <div>
+                        <img src="img/coin.svg" alt="">
+                        <p>
+                            1750 руб. (вместо 2140 руб.)
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body-block">
+                    <p class="modal-body-block__title">Маникюр + педикюр в 4 руки</p>
+                    <div>
+                        <img src="img/coin.svg" alt="">
+                        <p>
+                            1950 руб. (вместо 2450 руб.)
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body-block">
+                    <p class="modal-body-block__title">ДИЗАЙН</p>
+                    <div>
+                        <img src="img/coin.svg" alt="">
+                        <p>
+                            БЕСПЛАТНО при первом посещении
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <a href="#" class="btn btn-primary">Записаться</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <nav class="menu">
-            <div class="menu-spisok">
-                <a href="" class="menu-link">О мастерской</a>
-                <a href="" class="menu-link">Интерьер</a>
-                <a href="" class="menu-link">Наши работы</a>
-                <a href="" class="menu-link">Цены</a>
-                <a href="" class="menu-link">Контакты</a>
+            <div class="menu-spisok" id="menu">
+                <a href="#about" class="menu-link">О студии</a>
+                <a href="#house" class="menu-link">Интерьер</a>
+                <a href="#jobs" class="menu-link">Наши работы</a>
+                <a href="#price" class="menu-link">Цены</a>
+                <p class="menu-link menu-link__active" data-toggle="modal" data-target="#exampleModal">Акции</p>
+                <a href="#contact" class="menu-link">Контакты</a>
             </div>
             <div class="menu-soc">
-                <a href="#"><img src="img/vk.png" alt="Вконтакте"></a>
-                <a href="#"><img src="img/instagram.png" alt="Инстаграм"></a>
-                <a href="#"><img src="img/facebook.png" alt="Фэйсбук"></a>
+                <a target="blink" href="https://vk.com/ottenki_beauty_bar"><img src="img/vk.png" alt="Вконтакте"></a>
+                <a target="blink" href="https://www.instagram.com/ottenki.beauty.bar/"><img src="img/instagram.png" alt="Инстаграм"></a>
+                <a target="blink" href="https://www.facebook.com/ottenki.beauty.bar/"><img src="img/facebook.png" alt="Фэйсбук"></a>
+                <a target="blink" href="#"><img src="img/viber.svg" alt="Вайбер"></a>
+                <a target="blink" href="#"><img src="img/whatsapp.svg" alt="Ватсапп"></a>
             </div>
         </nav>
         <div class="fon">
@@ -34,27 +85,33 @@
         </div>
     </header>
 
+    <div class="about" id="about">
+        <h3><span>О нас</span></h3>
+    </div>
+
     <section class="about">
         <div class="about-block">
-           <h3>О нас</h3>
-           <p>Мастерская маникюра «Десять-десять» — это место, где каждая услуга выполняется безупречно. Мы собрали лучшую команду мастеров маникюра и педикюра, чтобы в любое время вы могли получить качественную услугу. Мы работаем над качеством услуг, уютом в нашей мастерской и квалификацией мастеров ежедневно.</p>
-           <ul class="about__spisok">
-               <li>Находимся в центре города</li>
-               <li>Контроль и соблюдение норм СанПин</li>
-               <li>Гарантия на покрытие гель лак 4 дня</li>
-               <li>Накопительная “beautyкарта” каждый 5 маникюр скидка 50%</li>
-               <li>Комплекс (маникюр+педикюр) с покрытием гель лак в 4 руки без
-                дополнительных наценок за 1950р( вместо 2450р)</li>
-               <li>Дизайн любой сложности</li>
-           </ul>
+            <div class="about-block-div">
+                <h1>Cтудия ногтевого сервиса в самом центре Ярославля!</h1>
+                <h3>Мы собрали лучшую команду мастеров маникюра и педикюра чтобы в любое время вы могли получить качественную услугу.</h3>
+                <h5>Уютная атмосфера🥰, стильный интерьер и ароматный кофе☕ все это ОТТЕНКИ.beauty.bar</h5>
+            </div>
         </div>
         <div class="about-block">
-            <img src="img/about.jpg" width="100%">
+            <ul class="about__spisok">
+                <li><img src="img/correct.svg" width="55px" height="55px" alt=""> Находимся в центре Ярославля</li>
+                <li><img src="img/correct.svg" width="55px" height="55px" alt=""> Контроль и соблюдение норм СанПин</li>
+                <li><img src="img/correct.svg" width="55px" height="55px" alt=""> Гарантия на покрытие гель-лака 4 дня</li>
+                <li><img src="img/correct.svg" width="55px" height="55px" alt=""> Накопительная “beautyкарта” каждый 5 маникюр скидка 50%</li>
+                <li><img src="img/correct.svg" width="55px" height="55px" alt=""> Комплекс (маникюр+педикюр) с покрытием гель-лака в 4 руки без
+                 дополнительных наценок за 1950р( вместо 2450р)</li>
+                <li><img src="img/correct.svg" width="55px" height="55px" alt=""> Дизайн любой сложности</li>
+            </ul>
         </div>
     </section>
 
-    <section class="house">
-        <h2>Наша мастерская</h2>
+    <section class="house" id="house">
+        <h2><span>Наша студия</span></h2>
         <div class="row-foto">
             <div class="block-foto"><img src="img/foto1.PNG"></div>
             <div class="block-foto"><img src="img/foto2.PNG"></div>
@@ -62,79 +119,509 @@
         </div>
     </section>
 
-    <section class="jobs">
-        <h2>Работы мастеров</h2>
-        <div class="jobs-row">
-            <div class="jobs-row__foto">
-                <img src="img/work/f1.PNG">
+    <section class="jobs" id="jobs">
+        <h2><span>Работы мастеров</span></h2>
+        <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f1.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f2.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f3.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f4.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f5.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f6.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f7.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f8.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f9.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f10.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f11.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f12.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f13.PNG">
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__content">
+                        <img class="slider__foto" src="img/work/f14.PNG">
+                    </div>
+                </div>
             </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f2.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f3.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f4.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f5.PNG">
-            </div>
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right" href="#" role="button"></a>
         </div>
-        <div class="jobs-row">
-            <div class="jobs-row__foto">
-                <img src="img/work/f6.PNG">
+    </section>
+
+    <section class="service" id="price">
+        <h2><span>Услуги</span></h2>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                  <img src="img/monik.svg" alt="маникюр">
+                  <p>
+                      Маникюр
+                  </p>
+              </a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                  <img src="img/pedik.svg" alt="Педикюр">
+                  <p>
+                      Педикюр
+                  </p>
+              </a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                  <img src="img/dizain.svg" alt="Дизайн">
+                  <p>
+                      Дизайн
+                  </p>
+              </a>
+              <a class="nav-item nav-link" id="nav-contact1-tab" data-toggle="tab" href="#nav-contact1" role="tab" aria-controls="nav-contact1" aria-selected="false">
+                <img src="img/dop_service.svg" alt="Дополнительный сервис">
+                <p>
+                    Дополнительный сервис
+                </p>
+            </a>
             </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f7.PNG">
+        </nav>
+        <div class="tab-content pt-4" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container-fluid">
+                    <div class="row justify-content-around">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Маникюр аппаратный без покрытия</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                                <li>Масло для кутикулы масаж с кремом</li>
+                            </ul>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 450 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 45 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex flex-column service-block">
+                            <h5 class="service-block__title">Покрытие гель-лак</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Покрытие гель-лака</li>
+                            </ul>
+                            <div class="row mt-auto">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 600 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 45 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Маникюр с покрытием</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы(аппаратный)</li>
+                                <li>Покрытие гель-лаком</li>
+                                <li>Масло для кутикулы и массаж с кремом для рук.</li>
+                            </ul>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 990 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 60-90 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex flex-column service-block">
+                            <h5 class="service-block__title">Наращивание ногтей с покрытием гель-лака</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                            </ul>
+                            <div class="row mt-auto">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 2440 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Мужской маникюр</h5>
+                            <ul class="service-block__spisok">
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                                <li>Масло для кутикулы масаж с кремом</li>
+                            </ul>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 500 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 60 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f8.PNG">
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container-fluid">
+                    <div class="row justify-content-around">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Педикюр аппаратный без покрытия</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                                <li>Обработка стопы одноразовой пилкой</li>
+                            </ul>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 1080 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 30-60 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex flex-column service-block">
+                            <h5 class="service-block__title">Педикюр обработка только пальчики</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                            </ul>
+                            <div class="row mt-auto">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 450 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 30 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Педикюр с покрытием</h5>
+                            <ul class="service-block__spisok">
+                                <li>Снятие предыдущего покрытия</li>
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                                <li>Обработка стопы одноразовой пилкой</li>
+                                <li>Покрытие гель-лаком</li>
+                                <li>Масло для кутикулы и крем для ног</li>
+                            </ul>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 1450 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 60 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex flex-column service-block">
+                            <h5 class="service-block__title">Педикюр мужской аппаратный</h5>
+                            <ul class="service-block__spisok">
+                                <li>Придание формы ногтям одноразовой пилкой</li>
+                                <li>Обработка стопы одноразовой пилкой</li>
+                                <li>Способ обработки кутикулы (аппаратный)</li>
+                            </ul>
+                            <div class="row mt-auto">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 1350 руб.</p>
+                                    <p class="service-block__price"><img src="img/clock.svg"> 60 мин.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f9.PNG">
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="container-fluid">
+                    <div class="row justify-content-around">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Французский маникюр / Лунный</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 1190 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Втирка</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 150 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Стразы</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 15 руб. / 1 шт.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Другие дизайны</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 25-200 руб. за ноготь</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f10.PNG">
-            </div>
-        </div>
-        <div class="jobs-row">
-            <div class="jobs-row__foto">
-                <img src="img/work/f11.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f12.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f13.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/f14.PNG">
-            </div>
-            <div class="jobs-row__foto">
-                <img src="img/work/foto14.1.JPG">
+            <div class="tab-pane fade" id="nav-contact1" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="container-fluid">
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Укрепелния топом или базой</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 100 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Укрепление гелем</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 200 руб. за ноготь</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Укрепелние акриловой пудрой</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 250 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Ремонт ногтя (наращивание)</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 150 руб. за ноготь</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Ремонт ногтя</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 50-100 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Снятие нашего материала без последующего покрытия</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 100 руб. за ноготь</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Снятие нашего материала с дальнейшим покрытием</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> БЕСПЛАТНО</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Снятие материала другого мастера</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 150 руб. за ноготь</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <div class="col-md-5 service-block">
+                            <h5 class="service-block__title">Холодный парафин. Руки/ноги</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <a target="blink" href="https://n122738.yclients.com/company:132764" class="service-block__btn">Записаться</a>
+                                </div>
+                                <div class="col-md-10 d-flex justify-content-end flex-row">
+                                    <p class="service-block__price"><img src="img/coin.svg"> 350 руб./ 500 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="service">
-        <h2>Услуги</h2>
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    <section class="contact mt-5" id="contact">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2 class="contact__title"><span>Контакты</span></h2>
+                    <div class="row d-flex justify-content-around">
+                        <a href="#" class="col-md-3 d-flex flex-column contact__btn">
+                            <img src="img/svg/phone.svg">
+                            Мобильный
+                        </a>
+                        <a href="#" class="col-md-3 d-flex flex-column contact__btn">
+                            <img src="img/svg/viber.svg">
+                            Viber
+                        </a>
+                        <a href="#" class="col-md-3 d-flex flex-column contact__btn">
+                            <img src="img/svg/watsapp.svg">
+                            WatsApp
+                        </a>
+                    </div>
+                    <p class="contact__name">Телефон студии</p>
+                    <p class="contact__number">8(961)-154-44-04</p>
+                    <p class="contact__name">Телефон отдела качества</p>
+                    <p class="contact__number">8960-535-92-09</p>
+                </div>
+                <div class="col-md-7">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2462ebe02b6fb45af3d5c60696a26a09f85f1dedcb008e67f25aea690feaf022&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
             </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
         </div>
     </section>
 
     <script src="js/jquery-1.11.0.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

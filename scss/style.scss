@@ -6,6 +6,37 @@ body{
     margin: 0;
 }
 
+.modal-body{
+    display: flex;
+    flex-direction: column;
+
+    &-block{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+
+        &__title{
+            margin-bottom: 5px;
+            font-size: 30px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+
+            img{
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
 header{
     position: relative;
     min-height: 100vh;
@@ -70,13 +101,18 @@ header{
         &-link{
             margin: auto 15px;
             font-family: 'Ubuntu', sans-serif;
-            font-size: 23px;
+            font-size: 25px;
             color: white;
             text-decoration: none;
+            cursor: pointer;
             transition: .4s;
 
             &:hover{
                 color: #ec6834;
+            }
+
+            &__active{
+                animation: link 2s ease-in-out infinite;
             }
         }
 
@@ -91,6 +127,20 @@ header{
                 margin: 0 5px;
             }
         }
+    }
+}
+
+@keyframes link{
+    0%{
+        color: white;
+    }
+
+    50%{
+        color: #ec6834;
+    }
+
+    100%{
+        color: white;
     }
 }
 
@@ -110,51 +160,106 @@ header{
     display: flex;
     flex-direction: row;
 
+    h3{
+        width: 100%;
+        margin-top: 70px;
+        margin-bottom: 15px;
+        font-family: 'Lora', serif;
+        font-size: 65px;
+        color: #ec6834;
+        text-align: center;
+        letter-spacing: 3px;
+
+        span{
+            padding: 0 70px;
+            padding-bottom: 4px;
+            border-bottom: 3px dotted #ec6834;
+        }
+    }
+
     &-block{
-        width: 50%;
+        display: flex;
+        flex-direction: column;
 
         &:first-child{
-            padding: 0 25px;
+            width: 44%;
+            padding: 0 15px;
         }
 
-        h3{
-            margin-bottom: 15px;
-            font-family: 'Lora', serif;
-            font-size: 50px;
-            color: #ec6834;
-            text-align: center;
-            letter-spacing: 3px;
+        &:last-child{
+            width: 56%;
         }
 
-        p{
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 22px;
-            font-weight: 400;
-            color: rgb(43, 43, 43);
+        &-div{
+            margin: auto 0;
+
+            h1{
+                margin: 0;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 50px;
+                font-weight: 400;
+                color: rgb(43, 43, 43);
+                text-align: center;
+            }
+
+            h3{
+                margin: 40px 0;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 35px;
+                font-weight: 400;
+                color: rgb(43, 43, 43);
+                text-align: center;
+                letter-spacing: 1px;
+            }
+
+            h5{
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 25px;
+                font-weight: 400;
+                color: rgb(43, 43, 43);
+                text-align: center;
+            }
         }
     }
 
     &__spisok{
-        margin-top: 35px;
+        margin-top: 5px;
         list-style: none;
 
         li{
-            padding: 5px 0;
+            padding: 15px 0;
             font-family: 'Ubuntu', sans-serif;
-            font-size: 20px;
+            font-size: 26px;
             font-weight: 400;
             color: rgb(43, 43, 43);
+
+            img{
+                margin-right: 7px;
+            }
         }
     }
 }
 
 .house{
+    padding: 80px 0;
+    padding-top: 60px;
+    background: url('../img/fon.jpg');
+    background-position-y: bottom;
+    background-size: cover;
+
     h2{
+        margin-bottom: 40px;
         font-family: 'Lora', serif;
-        font-size: 50px;
+        font-size: 65px;
         color: #ec6834;
         text-align: center;
         letter-spacing: 3px;
+
+        span{
+            padding: 0 70px;
+            padding-bottom: 4px;
+            border-bottom: 3px dotted #ec6834;
+        }
     }
 
     .row-foto{
@@ -165,6 +270,7 @@ header{
         .block-foto{
             box-sizing: border-box;
             width: 30%;
+            animation: shadow 3s ease-in-out infinite;
 
             img{
                 width: 100%;
@@ -173,41 +279,216 @@ header{
     }
 }
 
-.jobs{
-    margin-top: 50px;
+@keyframes shadow{
+    0%{
+        box-shadow: 0px 0px 8px 4px #ec6834;
+    }
+    50%{
+        box-shadow: 0px 0px 8px 4px #34ecdd;
+    }
+    100%{
+        box-shadow: 0px 0px 8px 4px #ec6834;
+    }
+}
 
+.jobs{
     h2{
-        margin-bottom: 20px;
+        margin-top: 70px;
+        margin-bottom: 30px;
         font-family: 'Lora', serif;
-        font-size: 50px;
+        font-size: 65px;
         color: #ec6834;
         text-align: center;
         letter-spacing: 3px;
-    }
 
-    &-row{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-bottom: 50px;
-
-        &__foto{
-            width: 15%;
-
-            img{
-                width: 100%;
-            }
+        span{
+            padding: 0 70px;
+            padding-bottom: 4px;
+            border-bottom: 3px dotted #ec6834;
         }
     }
 }
 
 .service{
     h2{
-        margin-bottom: 20px;
+        margin-top: 70px;
+        margin-bottom: 30px;
         font-family: 'Lora', serif;
-        font-size: 50px;
+        font-size: 65px;
         color: #ec6834;
         text-align: center;
         letter-spacing: 3px;
+
+        span{
+            padding: 0 70px;
+            padding-bottom: 4px;
+            border-bottom: 3px dotted #ec6834;
+        }
+    }
+
+    .nav-tabs{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .nav-item{
+            display: flex;
+            flex-direction: row;
+            width: 25%;
+            font-size: 30px;
+            color: rgb(2, 136, 214);
+
+            p{
+                margin: auto 0;
+            }
+
+            img{
+                width: 100px;
+                height: 100px;
+                margin-right: 10px;
+            }
+        }
+
+        .active{
+            color: orange;
+        }
+    }
+
+    &-block{
+        padding: 20px;
+        background: linear-gradient(-45deg, rgb(239, 253, 253), #ffffff, rgb(255, 250, 239));
+        background-size: 400% 400%;
+        border-radius: 15px;
+        box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.75);
+        animation: gradient 10s ease infinite;
+
+        &__title{
+            padding-bottom: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 35px;
+            color: orange;
+        }
+
+        &__spisok{
+            list-style: none;
+            padding-left: 20px;
+
+            li{
+                padding: 3px 0;
+                font-size: 25px;
+
+                &::before{
+                    content: "— ";
+                }
+            }
+        }
+
+        &__btn{
+            padding: 10px 35px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 24px;
+            color: black;
+            cursor: pointer;
+            background-color: rgb(0, 247, 255);
+            border: none;
+            border-radius: 13px;
+            box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.75);
+            transition: .6s;
+
+            &:hover{
+                text-decoration: none;
+                color: black;
+                background-color: orange;
+                transform: translateY(-3px);
+                box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.75);
+            }
+        }
+
+        &__price{
+            display: flex;
+            flex-direction: row;
+            padding-right: 15px;
+            margin: 0;
+            font-size: 27px;
+
+            img{
+                width: 45px;
+                height: 45px;
+                margin-right: 7px;
+            }
+        }
+    }
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.contact{
+    padding-top: 30px;
+    margin-top: 70px !important;
+    background: url('../img/fon1.jpg');
+    background-size: cover;
+
+    &__title{
+        margin-bottom: 30px;
+        font-family: 'Lora', serif;
+        font-size: 65px;
+        color: #ec6834;
+        text-align: center;
+        letter-spacing: 3px;
+
+        span{
+            padding: 0 70px;
+            padding-bottom: 4px;
+            border-bottom: 3px dotted #ec6834;
+        }
+    }
+
+    &__btn{
+        display: flex;
+        padding: 20px 0;
+        margin-bottom: 40px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgb(240, 240, 240);
+        border-radius: 50%;
+        box-shadow: 0px 4px 8px 1px rgba(248, 127, 13, 0.75);
+
+        img{
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
+
+    &__name{
+        margin: 0;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: right;
+        color: white;
+    }
+
+    &__number{
+        font-size: 28px;
+        text-align: right;
+        color: white;
     }
 }
