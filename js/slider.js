@@ -1,3 +1,22 @@
+let sliderBlock = document.querySelector('.slider__wrapper');
+let item;
+for (let i = 1; i < 49; i++) {
+  if (i <= 24) {
+    item = `<div class="slider__item">
+    <div class="slider__content">
+        <img class="slider__foto" src="img/work/f${i}.PNG">
+    </div>
+    </div>`;
+  }else{
+    item = `<div class="slider__item">
+    <div class="slider__content">
+        <img class="slider__foto" src="img/work/f${i}.JPEG">
+    </div>
+</div>`
+  }
+  sliderBlock.insertAdjacentHTML('beforeend', item)
+}
+
 var multiItemSlider = (function () {
 
     function _isElementVisible(element) {
@@ -236,3 +255,4 @@ var multiItemSlider = (function () {
   var slider = multiItemSlider('.slider', {
     isCycling: true
   })
+

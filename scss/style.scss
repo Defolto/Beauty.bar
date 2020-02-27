@@ -6,6 +6,10 @@ body{
     margin: 0;
 }
 
+*{
+    font-family: 'Exo 2', sans-serif !important;
+}
+
 .modal-body{
     display: flex;
     flex-direction: column;
@@ -199,10 +203,15 @@ header{
 
         &:last-child{
             flex-direction: row;
+
+            @media (max-width: 900px){
+                flex-direction: column;
+            }
         }
 
         &-div{
             margin: auto 0;
+
             h3{
                 margin: 40px 0;
                 font-family: 'Exo 2', sans-serif;
@@ -216,9 +225,25 @@ header{
     }
 
     &__spisok{
+        display: flex;
+        flex-direction: column;
         width: 33%;
         margin-top: 5px;
         list-style: none;
+
+        @media (max-width: 900px){
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        @media (max-width: 480px){
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
 
         li{
             display: flex;
@@ -228,6 +253,15 @@ header{
             font-size: 21px;
             font-weight: 400;
             color: rgb(43, 43, 43);
+
+            @media (max-width: 900px){
+                width: 50%;
+            }
+
+            @media (max-width: 480px){
+                width: 90%;
+                margin: 2px auto;
+            }
 
             img{
                 width: 30px;
@@ -258,6 +292,7 @@ header{
         display: flex;
         font-display: row;
         justify-content: space-around;
+        margin: 40px 0;
 
         .block-foto{
             box-sizing: border-box;
@@ -313,6 +348,10 @@ header{
         flex-direction: row;
         justify-content: space-around;
 
+        @media (max-width: 1440px){
+            flex-wrap: wrap;
+        }
+
         .nav-item{
             display: flex;
             flex-direction: row;
@@ -320,8 +359,22 @@ header{
             font-size: 30px;
             color: rgb(2, 136, 214);
 
+            @media (max-width: 1440px){
+                width: 50%;
+                border-color: #fff !important;
+            }
+
+            @media (max-width: 500px){
+                width: 100%;
+                border-color: #fff !important;
+            }
+
             p{
                 margin: auto 0;
+
+                @media (max-width: 500px){
+                    font-size: 20px;
+                }
             }
 
             img{
