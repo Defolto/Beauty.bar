@@ -13,5 +13,7 @@ $(document).ready(function(){
         var id  = $(this).attr('href'),
             top = $(id).offset().top-Number($('nav').height());
         $('body,html').animate({scrollTop: top}, 1500);
+        topMenu.classList.remove(`top-menu_show`);
+        topMenu.classList.add(`top-menu_hide`); 
     });
 });

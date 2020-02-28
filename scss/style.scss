@@ -43,7 +43,7 @@ body{
 
 header{
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 
     .fon{
@@ -75,6 +75,14 @@ header{
             img{
                 width: 50%;
                 margin: auto;
+
+                @media (max-width: 600px){
+                    width: 70%;
+                }
+
+                @media (max-width: 400px){
+                    width: 90%;
+                }
             }
 
             h3{
@@ -87,6 +95,16 @@ header{
                 letter-spacing: 3px;
                 border-top: 1px solid white;
                 border-bottom: 1px solid white;
+
+                @media (max-width: 600px){
+                    padding: 12px 10px;
+                    font-size: 40px;
+                }
+
+                @media (max-width: 400px){
+                    padding: 12px 10px;
+                    font-size: 25px;
+                }
             }
         }
     }
@@ -129,6 +147,60 @@ header{
                 width: 35px;
                 height: 35px;
                 margin: 0 5px;
+            }
+        }
+
+        &-mobile{
+            display: flex;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .8);
+
+            a{
+                padding: 4px 4px;
+
+                img{
+                    width: 25px;
+                    height: 25px;
+                    margin-left: auto;
+                }
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+                margin: 4px 0;
+                margin-right: 4px;
+                margin-left: auto;
+            }
+
+            .top-menu{
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                padding: 10px;
+                color: white;
+                background-color: rgba(0, 0, 0, .95);
+                transition: .6s;
+
+                #hamburgerMini{
+                    width: 30px;
+                    height: 30px;
+                    margin-left: auto;
+                }
+
+                .m0{
+                    padding: 4px;
+                    margin-bottom: 0;
+                }
+
+                &_hide{
+                    transform: translateY(-101%);
+                }
+
+                &_show{
+                    transform: translateY(0%);
+                }
             }
         }
     }
@@ -220,6 +292,10 @@ header{
                 color: rgb(43, 43, 43);
                 text-align: center;
                 letter-spacing: 1px;
+
+                &:first-child{
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -279,6 +355,10 @@ header{
     background-position-y: bottom;
     background-size: cover;
 
+    @media (max-width: 500px){
+        padding-top: 35px;
+    }
+
     h2{
         margin-bottom: 40px;
         font-family: 'Lora', serif;
@@ -290,14 +370,24 @@ header{
 
     .row-foto{
         display: flex;
-        font-display: row;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         margin: 40px 0;
 
         .block-foto{
             box-sizing: border-box;
             width: 30%;
+            margin: 20px 0;
             animation: shadow 3s ease-in-out infinite;
+
+            @media (max-width: 700px){
+                width: 45%;
+            }
+
+            @media (max-width: 450px){
+                width: 90%;
+            }
 
             img{
                 width: 100%;
@@ -364,7 +454,7 @@ header{
                 border-color: #fff !important;
             }
 
-            @media (max-width: 500px){
+            @media (max-width: 700px){
                 width: 100%;
                 border-color: #fff !important;
             }
@@ -372,7 +462,7 @@ header{
             p{
                 margin: auto 0;
 
-                @media (max-width: 500px){
+                @media (max-width: 700px){
                     font-size: 20px;
                 }
             }
@@ -397,6 +487,10 @@ header{
         box-shadow: 0 3px 9px 0 rgba(0, 0, 0, .75);
         animation: gradient 10s ease infinite;
 
+        @media (max-width: 768px){
+            margin: 20px;
+        }
+
         &__title{
             padding-bottom: 20px;
             font-family: 'Ubuntu', sans-serif;
@@ -408,9 +502,17 @@ header{
             padding-left: 20px;
             list-style: none;
 
+            @media (max-width: 500px){
+                padding-left: 5px;
+            }
+
             li{
                 padding: 3px 0;
                 font-size: 25px;
+
+                @media (max-width: 500px){
+                    font-size: 20px;
+                }
 
                 &::before{
                     content: "— ";
@@ -419,10 +521,13 @@ header{
         }
 
         &__btn{
+            display: block;
             padding: 10px 35px;
+            margin: auto 0;
             font-family: 'Ubuntu', sans-serif;
             font-size: 24px;
             color: white;
+            text-align: center;
             cursor: pointer;
             background-color: rgb(26, 145, 153);
             border: none;
@@ -439,16 +544,33 @@ header{
             }
         }
 
+        .leftText{
+            display: flex;
+
+            p:last-child{
+                margin-right: auto;
+            }
+        }
+
         &__price{
             display: flex;
             flex-direction: row;
             padding-right: 15px;
-            margin: 0;
+            margin: auto 0;
             font-size: 27px;
+
+            @media (max-width: 1300px){
+                font-size: 22px;
+            }
+
+            @media (max-width: 1200px){
+                margin-top: 10px;
+            }
 
             img{
                 width: 45px;
                 height: 45px;
+                margin: auto 0;
                 margin-right: 7px;
             }
         }
@@ -490,6 +612,11 @@ header{
         img{
             width: 60px;
             height: 60px;
+
+            @media (max-width: 400px){
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 
@@ -505,5 +632,50 @@ header{
         font-size: 28px;
         color: white;
         text-align: right;
+    }
+}
+
+.phone{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 111;
+    display: flex;
+    width: 105px;
+    height: 105px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 50%;
+    animation: shadow 2s ease-in-out infinite;
+
+    @media (max-width: 900px){
+        right: 10px;
+        bottom: 10px;
+        width: 55px;
+        height: 55px;
+    }
+
+    img{
+        width: 65px;
+        height: 65px;
+        margin: auto;
+
+        @media (max-width: 900px){
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+@keyframes shadow{
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 0 rgba(245, 101, 5, .8);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }

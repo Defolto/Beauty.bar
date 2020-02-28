@@ -1,6 +1,6 @@
 let sliderBlock = document.querySelector('.slider__wrapper');
 let item;
-for (let i = 1; i < 49; i++) {
+for (let i = 25; i < 49; i++) {
   if (i <= 24) {
     item = `<div class="slider__item">
     <div class="slider__content">
@@ -10,7 +10,7 @@ for (let i = 1; i < 49; i++) {
   }else{
     item = `<div class="slider__item">
     <div class="slider__content">
-        <img class="slider__foto" src="img/work/f${i}.JPEG">
+        <img class="slider__foto" src="img/work/f${i}.jpeg">
     </div>
 </div>`
   }
